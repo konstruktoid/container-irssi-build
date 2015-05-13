@@ -8,7 +8,7 @@ ENV SSL /etc/ssl/certs
 RUN mkdir -p $SSL && \
     apt-get update && \
     apt-get -y upgrade && \
-    apt-get -y install wget irssi irssi-plugin-otr && \
+    apt-get -y install wget irssi irssi-plugin-otr --no-install-recommends && \
     apt-get -y clean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/* && \
