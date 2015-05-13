@@ -11,6 +11,7 @@ RUN mkdir -p $SSL && \
     apt-get -y install wget irssi irssi-plugin-otr ca-certificates --no-install-recommends && \
     apt-get -y clean && \
     apt-get -y autoremove && \
+    wget --no-check-certificate https://www.instantssl.com/ssl-certificate-support/cert_installation/UTN-USERFirst-Hardware.crt -O $SSL\UTN-USERFirst-Hardware.pem && \
     rm -rf /var/lib/apt/lists/*
 
 RUN useradd --create-home --home-dir $HOME $USER && \
