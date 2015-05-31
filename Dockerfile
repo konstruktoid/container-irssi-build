@@ -12,7 +12,9 @@ RUN mkdir -p $SSL && \
     apt-get -y clean && \
     apt-get -y autoremove && \
     wget --no-check-certificate https://www.instantssl.com/ssl-certificate-support/cert_installation/UTN-USERFirst-Hardware.crt -O $SSL\UTN-USERFirst-Hardware.pem && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* \
+      /usr/share/doc /usr/share/doc-base \
+      /usr/share/man /usr/share/locale /usr/share/zoneinfo
 
 RUN useradd --create-home --home-dir $HOME $USER && \
     mkdir -p $HOME/.irssi && \
