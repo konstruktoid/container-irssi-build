@@ -1,6 +1,6 @@
 # Force autobuild 1439929936
 
-FROM ubuntu:vivid
+FROM konstruktoid/ubuntu:trusty
 
 ENV USER irssi
 ENV HOME /home/$USER
