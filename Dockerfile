@@ -1,5 +1,3 @@
-# Force autobuild 1439929936
-
 FROM konstruktoid/ubuntu:trusty
 
 ENV USER irssi
